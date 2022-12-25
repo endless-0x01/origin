@@ -1,13 +1,13 @@
-#include "ShowTransports.h"
+ï»¿#include "ShowTransports.h"
 
 void show_transports()
 {
-	std::cout << "1. Áîòèíêè-âåçäåõîäû" << std::endl;
-	std::cout << "2. Ìåòëà" << std::endl;
-	std::cout << "3. Âåðáëþä" << std::endl;
-	std::cout << "4. Êåíòàâð" << std::endl;
-	std::cout << "5. Îð¸ë" << std::endl;
-	std::cout << "6. Âåðáëþä-áûñòðîõîä" << std::endl;
-	std::cout << "7. Êîâ¸ð-ñàìîë¸ò" << std::endl;
+	std::cout << "1. Ð‘Ð¾Ñ‚Ð¸Ð½ÐºÐ¸-Ð²ÐµÐ·Ð´ÐµÑ…Ð¾Ð´Ñ‹" << std::endl;
+	std::cout << "2. ÐœÐµÑ‚Ð»Ð°" << std::endl;
+	std::cout << "3. Ð’ÐµÑ€Ð±Ð»ÑŽÐ´" << std::endl;
+	std::cout << "4. ÐšÐµÐ½Ñ‚Ð°Ð²Ñ€" << std::endl;
+	std::cout << "5. ÐžÑ€Ñ‘Ð»" << std::endl;
+	std::cout << "6. Ð’ÐµÑ€Ð±Ð»ÑŽÐ´-Ð±Ñ‹ÑÑ‚Ñ€Ð¾Ñ…Ð¾Ð´" << std::endl;
+	std::cout << "7. ÐšÐ¾Ð²Ñ‘Ñ€-ÑÐ°Ð¼Ð¾Ð»Ñ‘Ñ‚" << std::endl;
 
 }

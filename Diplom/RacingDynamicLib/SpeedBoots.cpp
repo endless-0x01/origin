@@ -1,6 +1,6 @@
-#include "SpeedBoots.h"
+п»ї#include "SpeedBoots.h"
 
-SpeedBoots::SpeedBoots() : Transport("Ботинки-быстроходы", 6, Transport::set_type_racing(1)) {
+SpeedBoots::SpeedBoots() : Transport("Р‘РѕС‚РёРЅРєРё-Р±С‹СЃС‚СЂРѕС…РѕРґС‹", 6, Transport::set_type_racing(1)) {
 	movement_before_rest = Transport::get_speed() * movement_to_rest;
 }
 

@@ -1,6 +1,6 @@
-#include "Kentavr.h"
+п»ї#include "Kentavr.h"
 
-Kentavr::Kentavr() : Transport("Кентавр", 15, Transport::set_type_racing(1)) {
+Kentavr::Kentavr() : Transport("РљРµРЅС‚Р°РІСЂ", 15, Transport::set_type_racing(1)) {
 	movement_before_rest = Transport::get_speed() * movement_to_rest;
 }
 

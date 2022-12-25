@@ -1,6 +1,6 @@
-#include "Camel.h"
+ο»Ώ#include "Camel.h"
 
-Camel::Camel() : Transport("Βεπαλώδ", 10, Transport::set_type_racing(1)) {
+Camel::Camel() : Transport("Π’ΠµΡ€Π±Π»ΡΠ΄", 10, Transport::set_type_racing(1)) {
 	movement_before_rest = Transport::get_speed() * movement_to_rest;
 }
 

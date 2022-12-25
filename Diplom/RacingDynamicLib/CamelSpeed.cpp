@@ -1,7 +1,7 @@
-#include "CamelSpeed.h"
+п»ї#include "CamelSpeed.h"
 
 
-CamelSpeed::CamelSpeed() : Transport("Верблюд-Быстроход", 40, Transport::set_type_racing(1)) {
+CamelSpeed::CamelSpeed() : Transport("Р’РµСЂР±Р»СЋРґ-Р‘С‹СЃС‚СЂРѕС…РѕРґ", 40, Transport::set_type_racing(1)) {
 	movement_before_rest = Transport::get_speed() * movement_to_rest;
 }
 

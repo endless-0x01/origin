@@ -1,4 +1,4 @@
-#include "data.h"
+п»ї#include "data.h"
 
 
 
@@ -6,7 +6,7 @@ int main()
 {
 	setlocale(LC_ALL, "Ru");
 
-	std::cout << "Добро пожаловать в гоночный симулятор!" << std::endl;
+	std::cout << "Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ РІ РіРѕРЅРѕС‡РЅС‹Р№ СЃРёРјСѓР»СЏС‚РѕСЂ!" << std::endl;
 	start_game();
 	return 0;
 }

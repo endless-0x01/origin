@@ -1,6 +1,6 @@
-#include "Broom.h"
+п»ї#include "Broom.h"
 
-Broom::Broom() : Transport("Метла", 20, Transport::set_type_racing(2)) {}
+Broom::Broom() : Transport("РњРµС‚Р»Р°", 20, Transport::set_type_racing(2)) {}
 
 void Broom::count_time_racing(int distance) {
 

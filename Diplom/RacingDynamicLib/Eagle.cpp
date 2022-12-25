@@ -1,6 +1,6 @@
-#include "Eagle.h"
+ï»¿#include "Eagle.h"
 
-Eagle::Eagle() : Transport("Îð¸ë", 8, Transport::set_type_racing(2)) {}
+Eagle::Eagle() : Transport("ÐžÑ€Ñ‘Ð»", 8, Transport::set_type_racing(2)) {}
 
 void Eagle::count_time_racing(int distance) {
 

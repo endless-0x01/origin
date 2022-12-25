@@ -1,6 +1,6 @@
-#include "CaretPlane.h"
+п»ї#include "CaretPlane.h"
 
-CaretPlane::CaretPlane() : Transport("Ковёр-самолёт", 10, Transport::set_type_racing(2)) {}
+CaretPlane::CaretPlane() : Transport("РљРѕРІС‘СЂ-СЃР°РјРѕР»С‘С‚", 10, Transport::set_type_racing(2)) {}
 
 void CaretPlane::count_time_racing(int distance) {
 	

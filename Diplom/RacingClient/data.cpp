@@ -1,4 +1,4 @@
-#include "data.h"
+п»ї#include "data.h"
 
 
 
@@ -11,10 +11,10 @@ int get_data()
 }
 
 int get_distance_game() {
-	std::cout << "Укажите длину дистанции (должна быть положительна): ";
+	std::cout << "РЈРєР°Р¶РёС‚Рµ РґР»РёРЅСѓ РґРёСЃС‚Р°РЅС†РёРё (РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅР°): ";
 	int distance = get_data();
 	if (distance < 0) {
-		std::cout << "Вы ввели отрицательную дистанцию, по правилам это делать нельзя. Игра будет окончена!\n";
+		std::cout << "Р’С‹ РІРІРµР»Рё РѕС‚СЂРёС†Р°С‚РµР»СЊРЅСѓСЋ РґРёСЃС‚Р°РЅС†РёСЋ, РїРѕ РїСЂР°РІРёР»Р°Рј СЌС‚Рѕ РґРµР»Р°С‚СЊ РЅРµР»СЊР·СЏ. РРіСЂР° Р±СѓРґРµС‚ РѕРєРѕРЅС‡РµРЅР°!\n";
 		exit(-1);
 	}
 	return distance;
@@ -38,9 +38,9 @@ void sort_ts(std::vector<Transport*>& ts) {
 
 void start_game()
 {
-	std::cout << "1. Гонка для наземного транспорта" << std::endl;
-	std::cout << "2. Гонка для воздушного транспорта" << std::endl;
-	std::cout << "3. Гонка для наземного и воздушного транспорта" << std::endl;
+	std::cout << "1. Р“РѕРЅРєР° РґР»СЏ РЅР°Р·РµРјРЅРѕРіРѕ С‚СЂР°РЅСЃРїРѕСЂС‚Р°" << std::endl;
+	std::cout << "2. Р“РѕРЅРєР° РґР»СЏ РІРѕР·РґСѓС€РЅРѕРіРѕ С‚СЂР°РЅСЃРїРѕСЂС‚Р°" << std::endl;
+	std::cout << "3. Р“РѕРЅРєР° РґР»СЏ РЅР°Р·РµРјРЅРѕРіРѕ Рё РІРѕР·РґСѓС€РЅРѕРіРѕ С‚СЂР°РЅСЃРїРѕСЂС‚Р°" << std::endl;
 
 	enum action_choice
 	{
@@ -50,7 +50,7 @@ void start_game()
 	std::vector<Transport*> ts;
 	int distance{};
 	
-	std::cout << "Выбирите тип гонки: ";
+	std::cout << "Р’С‹Р±РёСЂРёС‚Рµ С‚РёРї РіРѕРЅРєРё: ";
 	int choice_racing = get_data();
 
 	int user_choise{};
@@ -62,10 +62,10 @@ void start_game()
 		if (new_race) {
 			system("cls");
 			new_race = false;
-			std::cout << "1. Гонка для наземного транспорта" << std::endl;
-			std::cout << "2. Гонка для воздушного транспорта" << std::endl;
-			std::cout << "3. Гонка для наземного и воздушного транспорта" << std::endl;
-			std::cout << "Выбирите тип гонки: ";
+			std::cout << "1. Р“РѕРЅРєР° РґР»СЏ РЅР°Р·РµРјРЅРѕРіРѕ С‚СЂР°РЅСЃРїРѕСЂС‚Р°" << std::endl;
+			std::cout << "2. Р“РѕРЅРєР° РґР»СЏ РІРѕР·РґСѓС€РЅРѕРіРѕ С‚СЂР°РЅСЃРїРѕСЂС‚Р°" << std::endl;
+			std::cout << "3. Р“РѕРЅРєР° РґР»СЏ РЅР°Р·РµРјРЅРѕРіРѕ Рё РІРѕР·РґСѓС€РЅРѕРіРѕ С‚СЂР°РЅСЃРїРѕСЂС‚Р°" << std::endl;
+			std::cout << "Р’С‹Р±РёСЂРёС‚Рµ С‚РёРї РіРѕРЅРєРё: ";
 			choice_racing = get_data();
 			distance = get_distance_game();
 		}
@@ -73,16 +73,16 @@ void start_game()
 
 		if (ts.empty() || ts.size() < 2) {
 			system("cls");
-			std::cout << "Должно быть зарегестрирована хотя бы 2 транспортных средства" << std::endl;
-			std::cout << "1. Зарегестрировать транспортное средство" << std::endl;;
+			std::cout << "Р”РѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р·Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°РЅР° С…РѕС‚СЏ Р±С‹ 2 С‚СЂР°РЅСЃРїРѕСЂС‚РЅС‹С… СЃСЂРµРґСЃС‚РІР°" << std::endl;
+			std::cout << "1. Р—Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°С‚СЊ С‚СЂР°РЅСЃРїРѕСЂС‚РЅРѕРµ СЃСЂРµРґСЃС‚РІРѕ" << std::endl;;
 		}
 		else {
 			system("cls");
-			std::cout << "1. Зарегестрировать транспортное средство" << std::endl;
-			std::cout << "2. Начать гонку" << std::endl;
+			std::cout << "1. Р—Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°С‚СЊ С‚СЂР°РЅСЃРїРѕСЂС‚РЅРѕРµ СЃСЂРµРґСЃС‚РІРѕ" << std::endl;
+			std::cout << "2. РќР°С‡Р°С‚СЊ РіРѕРЅРєСѓ" << std::endl;
 		}
 
-		std::cout << "Выберите действия: ";
+		std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РґРµР№СЃС‚РІРёСЏ: ";
 		std::cin >> user_choise;
 
 		if (!distance) {
@@ -93,21 +93,21 @@ void start_game()
 
 		if (user_choise == action_choice::registration) {
 			if (choice_racing == 1) {
-				std::cout << "Гонка для наземного транспорта. Расстояние: " << distance << std::endl;
+				std::cout << "Р“РѕРЅРєР° РґР»СЏ РЅР°Р·РµРјРЅРѕРіРѕ С‚СЂР°РЅСЃРїРѕСЂС‚Р°. Р Р°СЃСЃС‚РѕСЏРЅРёРµ: " << distance << std::endl;
 				show_transports();
-				std::cout << "0. Закончить регистрацию" << std::endl;
+				std::cout << "0. Р—Р°РєРѕРЅС‡РёС‚СЊ СЂРµРіРёСЃС‚СЂР°С†РёСЋ" << std::endl;
 				vehicle_registration(ts, choice_racing, distance);
 			}
 			else if (choice_racing == 2) {
-				std::cout << "Гонка для воздушного транспорта. Расстояние: " << distance << std::endl;
+				std::cout << "Р“РѕРЅРєР° РґР»СЏ РІРѕР·РґСѓС€РЅРѕРіРѕ С‚СЂР°РЅСЃРїРѕСЂС‚Р°. Р Р°СЃСЃС‚РѕСЏРЅРёРµ: " << distance << std::endl;
 				show_transports();
-				std::cout << "0. Закончить регистрацию" << std::endl;
+				std::cout << "0. Р—Р°РєРѕРЅС‡РёС‚СЊ СЂРµРіРёСЃС‚СЂР°С†РёСЋ" << std::endl;
 				vehicle_registration(ts, choice_racing, distance);
 			}
 			else if (choice_racing == 3) {
-				std::cout << "Гонка для наземного и воздушного транспорта. Расстояние: " << distance << std::endl;
+				std::cout << "Р“РѕРЅРєР° РґР»СЏ РЅР°Р·РµРјРЅРѕРіРѕ Рё РІРѕР·РґСѓС€РЅРѕРіРѕ С‚СЂР°РЅСЃРїРѕСЂС‚Р°. Р Р°СЃСЃС‚РѕСЏРЅРёРµ: " << distance << std::endl;
 				show_transports();
-				std::cout << "0. Закончить регистрацию" << std::endl;
+				std::cout << "0. Р—Р°РєРѕРЅС‡РёС‚СЊ СЂРµРіРёСЃС‚СЂР°С†РёСЋ" << std::endl;
 				vehicle_registration(ts, choice_racing, distance);
 			}
 		}
@@ -117,16 +117,16 @@ void start_game()
 				vh->count_time_racing(distance);
 			}
 
-			std::cout << "Результат: " << std::endl;
+			std::cout << "Р РµР·СѓР»СЊС‚Р°С‚: " << std::endl;
 			sort_ts(ts);
 			for (int i = 0; i < ts.size(); i++) {
-				std::cout  << i + 1 << ". " << ts[i]->get_name_ts() << " Время: " << ts[i]->get_time() << std::endl;
+				std::cout  << i + 1 << ". " << ts[i]->get_name_ts() << " Р’СЂРµРјСЏ: " << ts[i]->get_time() << std::endl;
 			}
 
 			std::cout << "-----------------------------------\n";
-			std::cout << "1. Провести еще одну гонку\n";
-			std::cout << "2. Выйти\n";
-			std::cout << "Выберите действие: ";
+			std::cout << "1. РџСЂРѕРІРµСЃС‚Рё РµС‰Рµ РѕРґРЅСѓ РіРѕРЅРєСѓ\n";
+			std::cout << "2. Р’С‹Р№С‚Рё\n";
+			std::cout << "Р’С‹Р±РµСЂРёС‚Рµ РґРµР№СЃС‚РІРёРµ: ";
 			user_choise = get_data();
 			if (user_choise == 1) {
 				ts.clear();
@@ -165,7 +165,7 @@ result_checked check_ts_for_availability(std::vector<Transport*>& ts, Transport*
 }
 
 void ts_in_stock(std::vector<Transport*>& ts) {
-	std::cout << "Зарегестрированны транспортные средства: ";
+	std::cout << "Р—Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹ С‚СЂР°РЅСЃРїРѕСЂС‚РЅС‹Рµ СЃСЂРµРґСЃС‚РІР°: ";
 	for (auto vh : ts)
 	{
 		std::cout << vh->get_name_ts() << ", ";
@@ -182,28 +182,28 @@ void vehicle_registration(std::vector<Transport*>& ts, int type_game, int distan
 		switch (rhs)
 		{
 		case result_checked::succes:
-			std::cout << ts[ts.size() - 1]->get_name_ts() << " успешно зарегестрирован." << std::endl;
+			std::cout << ts[ts.size() - 1]->get_name_ts() << " СѓСЃРїРµС€РЅРѕ Р·Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°РЅ." << std::endl;
 			break;
 		case result_checked::repeat:
-			std::cout << rp_name << " уже зарегестрирован." << std::endl;
+			std::cout << rp_name << " СѓР¶Рµ Р·Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°РЅ." << std::endl;
 			break;
 		case result_checked::wrong_type:
-			std::cout << "Попытка зарегестрировать неправильный тип транспортного средства!" << std::endl;
+			std::cout << "РџРѕРїС‹С‚РєР° Р·Р°СЂРµРіРµСЃС‚СЂРёСЂРѕРІР°С‚СЊ РЅРµРїСЂР°РІРёР»СЊРЅС‹Р№ С‚РёРї С‚СЂР°РЅСЃРїРѕСЂС‚РЅРѕРіРѕ СЃСЂРµРґСЃС‚РІР°!" << std::endl;
 			break;
 		default:
 			break;
 		}
 
 		if(type_game == 1)
-			std::cout << "Гонка для наземного транспорта. Расстояние: " << distance << std::endl;
+			std::cout << "Р“РѕРЅРєР° РґР»СЏ РЅР°Р·РµРјРЅРѕРіРѕ С‚СЂР°РЅСЃРїРѕСЂС‚Р°. Р Р°СЃСЃС‚РѕСЏРЅРёРµ: " << distance << std::endl;
 		else if(type_game == 2)
-			std::cout << "Гонка для воздушного транспорта. Расстояние: " << distance << std::endl;
+			std::cout << "Р“РѕРЅРєР° РґР»СЏ РІРѕР·РґСѓС€РЅРѕРіРѕ С‚СЂР°РЅСЃРїРѕСЂС‚Р°. Р Р°СЃСЃС‚РѕСЏРЅРёРµ: " << distance << std::endl;
 		else
-			std::cout << "Гонка для наземного и воздушного транспорта. Расстояние: " << distance << std::endl;
+			std::cout << "Р“РѕРЅРєР° РґР»СЏ РЅР°Р·РµРјРЅРѕРіРѕ Рё РІРѕР·РґСѓС€РЅРѕРіРѕ С‚СЂР°РЅСЃРїРѕСЂС‚Р°. Р Р°СЃСЃС‚РѕСЏРЅРёРµ: " << distance << std::endl;
 
 		ts_in_stock(ts);
 		show_transports();
-		std::cout << "Выберите транспорт или 0 для окончания процесса регистрации: ";
+		std::cout << "Р’С‹Р±РµСЂРёС‚Рµ С‚СЂР°РЅСЃРїРѕСЂС‚ РёР»Рё 0 РґР»СЏ РѕРєРѕРЅС‡Р°РЅРёСЏ РїСЂРѕС†РµСЃСЃР° СЂРµРіРёСЃС‚СЂР°С†РёРё: ";
 		int user_ch = get_data();
 		switch (user_ch)
 		{
@@ -238,7 +238,7 @@ void vehicle_registration(std::vector<Transport*>& ts, int type_game, int distan
 		case 0:
 			return;
 		default:
-			std::cout << "Такого транспортно средства нет" << std::endl;
+			std::cout << "РўР°РєРѕРіРѕ С‚СЂР°РЅСЃРїРѕСЂС‚РЅРѕ СЃСЂРµРґСЃС‚РІР° РЅРµС‚" << std::endl;
 			break;
 		}
 	}
