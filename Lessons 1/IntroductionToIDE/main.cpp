@@ -73,6 +73,8 @@ int main()
 		out << arr_first[i] << " ";
 	out << "\n";
 
+	free(arr_first);
+	free(arr_second);
 
 	return 0;
 }
