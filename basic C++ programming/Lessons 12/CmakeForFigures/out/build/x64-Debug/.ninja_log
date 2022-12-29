@@ -1,0 +1,15 @@
+# ninja log v5
+13	902	6928286451878994	CMakeFiles/FigureDynamicLib.dir/MyExceptions.cpp.obj	24de1584a12fbd13
+9	906	6928286451928917	CMakeFiles/FigureDynamicLib.dir/Figure.cpp.obj	6c03b235a9fdf193
+25	921	6928286452054024	CMakeFiles/FigureEXE.dir/main.cpp.obj	1762c1f8c2c6e46
+20	912	6928286451984211	CMakeFiles/FigureDynamicLib.dir/Trinagle.cpp.obj	5cc35ca1ffe7c51d
+16	909	6928286451938898	CMakeFiles/FigureDynamicLib.dir/Quadrilateral.cpp.obj	9d1da0865501726
+9	19	0	clean	8c45b54705a541e8
+81	2106	6928314586508813	CMakeFiles/FigureDynamicLib.dir/MyExceptions.cpp.obj	24de1584a12fbd13
+158	2127	6928314586759215	CMakeFiles/FigureDynamicLib.dir/Quadrilateral.cpp.obj	9d1da0865501726
+311	2132	6928314586739282	CMakeFiles/FigureEXE.dir/main.cpp.obj	1762c1f8c2c6e46
+13	2135	6928314586834691	CMakeFiles/FigureDynamicLib.dir/Figure.cpp.obj	6c03b235a9fdf193
+234	2148	6928314586995982	CMakeFiles/FigureDynamicLib.dir/Trinagle.cpp.obj	5cc35ca1ffe7c51d
+2148	4883	6928314613516306	FigureDynamicLib.dll	74bc2804ba301f39
+2148	4883	6928314613516306	FigureDynamicLib.lib	74bc2804ba301f39
+4883	6343	6928314628369866	FigureEXE.exe	cfd253a47decf525

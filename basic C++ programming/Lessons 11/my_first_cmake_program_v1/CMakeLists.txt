@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.0)
+
+project(YOUR_NAME)
+
+add_executable(hello_name Source.cpp)

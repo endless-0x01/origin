@@ -1,0 +1,2 @@
+D:/MyJobs/Lessons 5/Figures/Figures v.2.0/Figures 2.0/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+D:/MyJobs/Lessons 5/Figures/Figures v.2.0/Figures 2.0/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

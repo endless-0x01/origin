@@ -1,0 +1,4 @@
+D:/MyJobs/Lessons 12/CmakeForFigures/out/build/x64-Debug/CMakeFiles/FigureDynamicLib.dir
+D:/MyJobs/Lessons 12/CmakeForFigures/out/build/x64-Debug/CMakeFiles/FigureEXE.dir
+D:/MyJobs/Lessons 12/CmakeForFigures/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+D:/MyJobs/Lessons 12/CmakeForFigures/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

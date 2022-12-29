@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "HelloAndBye",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "GreeterStaticLib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GreeterStaticLib-Debug-cf56c890f971d57362cd.json",
+					"name" : "GreeterStaticLib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "HelloAndByeEXE::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HelloAndByeEXE-Debug-de5d317e4577cb4e4bfc.json",
+					"name" : "HelloAndByeEXE",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LeaverLibDynamic::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LeaverLibDynamic-Debug-db946b5680a1a457ab08.json",
+					"name" : "LeaverLibDynamic",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/MyJobs/cmake/out/build/x64-Debug",
+		"source" : "D:/MyJobs/cmake"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

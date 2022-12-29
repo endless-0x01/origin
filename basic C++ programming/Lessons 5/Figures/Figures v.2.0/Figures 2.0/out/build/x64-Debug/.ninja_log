@@ -1,0 +1,7 @@
+# ninja log v5
+4	645	6925737014344553	CMakeFiles/figures.dir/MyExceptions.cpp.obj	3a4b2e1cb8d9b343
+7	647	6925737014384436	CMakeFiles/figures.dir/Figure.cpp.obj	c13c667ddf2110b7
+14	650	6925737014414365	CMakeFiles/figures.dir/Trinagle.cpp.obj	1d96e313af719a0d
+1	655	6925737014491592	CMakeFiles/figures.dir/main.cpp.obj	1c16fae6089ee6eb
+11	659	6925737014521570	CMakeFiles/figures.dir/Quadrilateral.cpp.obj	2f31b86f750cfbba
+659	1002	6925737017668511	figures.exe	ceea612879a2fbb3

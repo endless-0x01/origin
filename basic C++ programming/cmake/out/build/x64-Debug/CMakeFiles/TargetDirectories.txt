@@ -1,0 +1,5 @@
+D:/MyJobs/cmake/out/build/x64-Debug/CMakeFiles/GreeterStaticLib.dir
+D:/MyJobs/cmake/out/build/x64-Debug/CMakeFiles/LeaverLibDynamic.dir
+D:/MyJobs/cmake/out/build/x64-Debug/CMakeFiles/HelloAndByeEXE.dir
+D:/MyJobs/cmake/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+D:/MyJobs/cmake/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

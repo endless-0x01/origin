@@ -1,0 +1,6 @@
+# ninja log v5
+1	453	6925733423221564	CMakeFiles/hello_name.dir/main.cpp.obj	d43fcdf21f97f07c
+3	137	6925734184640139	build.ninja	7a1a59c721417cfa
+454	791	6925733426321001	hello_name.exe	f8bf32d9e6bf9bbd
+14	647	6925734190073293	CMakeFiles/hello_name.dir/Source.cpp.obj	5cac34fe13be6474
+647	843	6925734191600990	hello_name.exe	2e383c8ed1e33d21

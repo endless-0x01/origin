@@ -1,0 +1,8 @@
+# ninja log v5
+5	526	6926924361327477	CMakeFiles/LeaverLibDynamic.dir/Leaver.cpp.obj	22a7c8a90ed8b51d
+2	563	6926924361707542	CMakeFiles/GreeterStaticLib.dir/Greeter.cpp.obj	d41e27626eb257e0
+6	612	6926924806659793	CMakeFiles/HelloAndByeEXE.dir/GreeterClient.cpp.obj	4cad331891079050
+563	647	6926924362107282	GreeterStaticLib.lib	5ddc16568545feec
+527	1035	6926924366197741	LeaverLibDynamic.dll	2887e0d3e4805b0c
+527	1035	6926924366197741	LeaverLibDynamic.lib	2887e0d3e4805b0c
+612	797	6926924808095674	HelloAndByeEXE.exe	e17b4b19d7dfb91f
