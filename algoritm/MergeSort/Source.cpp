@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <algorithm>
 #include <iterator>
 
@@ -45,7 +45,7 @@ void mergeSort(int* arr, int n)
 
 		std::copy(&tmp_arr[0], &tmp_arr[n], arr);
 	}
-	
+
 	for (int i = 0; i < n; i++)
 	{
 		std::cout << arr[i] << ", ";
