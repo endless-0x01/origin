@@ -1,4 +1,4 @@
-ï»¿#include <iostream>
+#include <iostream>
 #include <algorithm>
 #include <iterator>
 #include <Windows.h>
@@ -67,7 +67,7 @@ public:
 		actual_size_arr(size_a), logical_size_arr(size_l) {
 
 		if (actual_size_arr < logical_size_arr) {
-			throw std::exception("ÐžÑˆÐ¸Ð±ÐºÐ°! Ð›Ð¾Ð³Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð° Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð¿Ñ€ÐµÐ²Ñ‹ÑˆÐ°Ñ‚ÑŒ Ñ„Ð°ÐºÑ‚Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹!");
+			throw std::exception("Îøèáêà! Ëîãè÷åñêèé ðàçìåð ìàññèâà íå ìîæåò ïðåâûøàòü ôàêòè÷åñêèé!");
 		}
 		arr = new int[actual_size_arr] {};
 	}
@@ -81,7 +81,7 @@ public:
 	void fill_arr() {
 		for (int i = 0; i < logical_size_arr; i++)
 		{
-			std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ arr[" << i << "]: ";
+			std::cout << "Ââåäèòå arr[" << i << "]: ";
 			int num{};
 			std::cin >> num;
 			arr[i] = num;
@@ -109,7 +109,11 @@ public:
 		while (true) {
 
 			int element{};
+<<<<<<< HEAD
 			std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ Ð´Ð»Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ: ";
+=======
+			std::cout << "Ââåäèòå ýëåìåíò äëÿ äîáàâëåíèÿ: ";
+>>>>>>> f612aba41e0ae7c5bd9a6d1bfb4099ac4dfb73a0
 			std::cin >> element;
 			if (!element)
 				return;
@@ -135,7 +139,11 @@ public:
 				arr = temp_arr;
 			}
 
+<<<<<<< HEAD
 			std::cout << "Ð”Ð¸Ð½Ð°Ð¼Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: ";
+=======
+			std::cout << "Äèíàìè÷åñêèé ìàññèâ: ";
+>>>>>>> f612aba41e0ae7c5bd9a6d1bfb4099ac4dfb73a0
 			print_dynamic_array();
 
 		}
@@ -148,15 +156,26 @@ public:
 		while (true) {
 			double result = static_cast<double>(actual_size_arr) / 3.0;
 
+<<<<<<< HEAD
 			std::cout << "Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚?: ";
 			std::string str;
 			std::cin >> str;
 			if (str == "Ð½ÐµÑ‚") {
+=======
+			std::cout << "Óäàëèòü ïåðâûé ýëåìåíò?: ";
+			std::string str;
+			std::cin >> str;
+			if (str == "íåò") {
+>>>>>>> f612aba41e0ae7c5bd9a6d1bfb4099ac4dfb73a0
 				return;
 			}
 			else if (logical_size_arr == 0)
 			{
+<<<<<<< HEAD
 				std::cout << "Ð£Ð´Ð°Ð»ÑÑ‚ÑŒ Ð½ÐµÑ‡ÐµÐ³Ð¾, Ð²Ð°Ñˆ Ð¼Ð°ÑÑÐ¸Ð² Ð¿ÑƒÑÑ‚!" << std::endl;
+=======
+				std::cout << "Óäàëÿòü íå÷åãî, âàø ìàññèâ ïóñò!" << std::endl;
+>>>>>>> f612aba41e0ae7c5bd9a6d1bfb4099ac4dfb73a0
 				return;
 			}
 			
@@ -205,11 +224,11 @@ int main()
 
 	try {
 		int actual_s{};
-		std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ„Ð°ÐºÑ‚Ð¸Ñ‡ÐµcÐºÐ¸Ð¹ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð°: ";
+		std::cout << "Ââåäèòå ôàêòè÷åcêèé ðàçìåð ìàññèâà: ";
 		std::cin >> actual_s;
 
 		int logical_s{};
-		std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð»Ð¾Ð³Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð°: ";
+		std::cout << "Ââåäèòå ëîãè÷åñêèé ðàçìåð ìàññèâà: ";
 		std::cin >> logical_s;
 
 		my_vector arr(actual_s, logical_s);
@@ -217,7 +236,11 @@ int main()
 		arr.print_dynamic_array();
 		arr.append_to_dynamic_array();
 		arr.remove_dynamic_array_head();
+<<<<<<< HEAD
 		std::cout << "Ð¡Ð¿Ð°ÑÐ¸Ð±Ð¾, Ð²Ð°Ñˆ Ð¼Ð°ÑÑÐ¸Ð²: ";
+=======
+		std::cout << "Ñïàñèáî, âàø ìàññèâ: ";
+>>>>>>> f612aba41e0ae7c5bd9a6d1bfb4099ac4dfb73a0
 		arr.print_dynamic_array();
 
 	}
