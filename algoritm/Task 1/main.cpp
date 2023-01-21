@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 #include <algorithm>
 #include <iterator>
+#include <Windows.h>
+
 
 //void mergeSort(int* arr, int n)
 //{
@@ -59,9 +61,10 @@ private:
 	int* arr = nullptr;
 	int actual_size_arr{};
 	int logical_size_arr{};
+	int last_element{};
 public:
 	my_vector(int size_a, int size_l) :
-	actual_size_arr(size_a), logical_size_arr(size_l) {
+		actual_size_arr(size_a), logical_size_arr(size_l) {
 
 		if (actual_size_arr < logical_size_arr) {
 			throw std::exception("Ошибка! Логический размер массива не может превышать фактический!");
@@ -82,6 +85,7 @@ public:
 			int num{};
 			std::cin >> num;
 			arr[i] = num;
+			last_element++;
 		}
 	}
 
@@ -89,13 +93,106 @@ public:
 	{
 		for (int i = 0; i < actual_size_arr; i++)
 		{
-			if (i < logical_size_arr)
+			if (i < logical_size_arr) {
 				std::cout << arr[i] << " ";
+			}
 			else
 				std::cout << "_ ";
 		}
 
 		std::cout << std::endl;
+	}
+
+	void append_to_dynamic_array()
+	{
+
+		while (true) {
+
+			int element{};
+			std::cout << "Введите элемент для добавления: ";
+			std::cin >> element;
+			if (!element)
+				return;
+
+			if (logical_size_arr < actual_size_arr) {
+				arr[last_element++] = element;
+				logical_size_arr++;
+			}
+			else
+			{
+				actual_size_arr *= 2;
+				int* temp_arr = new int[actual_size_arr] {};
+
+				for (int i = 0; i < logical_size_arr; i++) {
+					temp_arr[i] = arr[i];
+				}
+				temp_arr[last_element++] = element;
+				logical_size_arr++;
+
+				delete[] arr;
+				arr = nullptr;
+
+				arr = temp_arr;
+			}
+
+			std::cout << "Динамический массив: ";
+			print_dynamic_array();
+
+		}
+	}
+
+	void remove_dynamic_array_head()
+	{
+
+
+		while (true) {
+			double result = static_cast<double>(actual_size_arr) / 3.0;
+
+			std::cout << "Удалить первый элемент?: ";
+			std::string str;
+			std::cin >> str;
+			if (str == "нет") {
+				return;
+			}
+			else if (logical_size_arr == 0)
+			{
+				std::cout << "Удалять нечего, ваш массив пуст!" << std::endl;
+				return;
+			}
+			
+
+			if (result < (logical_size_arr - 1)) {
+
+
+				for (int i = 0; i < logical_size_arr - 1; i++)
+				{
+					arr[i] = arr[i + 1];
+				}
+				logical_size_arr--;
+				last_element--;
+
+			}
+			else
+			{
+				actual_size_arr /= 3;
+				int* temp_arr = new int[actual_size_arr] {};
+
+				for (int i = 0; i < logical_size_arr - 1; i++)
+				{
+					temp_arr[i] = arr[i + 1];
+				}
+
+				logical_size_arr--;
+				last_element--;
+
+				delete[] arr;
+				arr = nullptr;
+
+				arr = temp_arr;
+
+			}
+			print_dynamic_array();
+		}
 	}
 };
 
@@ -103,6 +200,8 @@ public:
 int main()
 {
 	setlocale(LC_ALL, "Ru");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 
 	try {
 		int actual_s{};
@@ -116,9 +215,13 @@ int main()
 		my_vector arr(actual_s, logical_s);
 		arr.fill_arr();
 		arr.print_dynamic_array();
+		arr.append_to_dynamic_array();
+		arr.remove_dynamic_array_head();
+		std::cout << "Спасибо, ваш массив: ";
+		arr.print_dynamic_array();
 
 	}
-	catch (std::exception &e)
+	catch (std::exception& e)
 	{
 		std::cout << e.what() << std::endl;
 	}
