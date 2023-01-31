@@ -68,6 +68,7 @@ void real_string_hash()
 
 }
 
+
 void find_substring_light_rabin_karp()
 {
 	std::cout << "Введите строку, в которой будет осуществляться поиск: ";
@@ -82,16 +83,17 @@ void find_substring_light_rabin_karp()
 		std::cout << "Введите подстроку, которую нужно найти: ";
 		std::string substring;
 		std::cin >> substring;
+
 		for (int i = 0; i < search_line.size(); i++)
 		{
-			find_substr = true;
-			for (int j = 0; j < substring.size(); j++)
-			{
-				if (search_line[i + j] != substring[j]) {
-					find_substr = false;
-					break;
+				find_substr = true;
+				for (int j = 0; j < substring.size(); j++)
+				{
+					if (search_line[i + j] != substring[j]) {
+						find_substr = false;
+						break;
+					}
 				}
-			}
 
 			if (find_substr) {
 				index_s = i;
@@ -104,9 +106,11 @@ void find_substring_light_rabin_karp()
 
 		if (substring == "exit")
 			return;
+
 	}
 
 }
+
 
 int main()
 {
