@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 ï»¿#include <iostream>
-=======
-#include <iostream>
->>>>>>> e84f42f40528f8d5014c3d70661dc0477122dab7
 #include <fstream>
 #include <vector>
 
@@ -54,21 +50,13 @@ int main()
 	std::ifstream in("D:\\netology\\algoritm\\Graph\\input.txt");
 
 	if (!in.is_open()) {
-<<<<<<< HEAD
 		std::cout << "ÐžÑˆÐ¸Ð±ÐºÐ° Ð¾Ñ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ñ Ñ„Ð°Ð¹Ð»Ð°.\n";
-=======
-		std::cout << "Îøèáêà îòêðûòèÿ ôàéëà.\n";
->>>>>>> e84f42f40528f8d5014c3d70661dc0477122dab7
 	}
 	
 	int vertexs{};
 	in >> vertexs;
 
-<<<<<<< HEAD
 	std::cout << "ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° ÑÐ¼ÐµÐ¶Ð½Ð¾ÑÑ‚Ð¸: \n";
-=======
-	std::cout << "Ìàòðèöà ñìåæíîñòè: \n";
->>>>>>> e84f42f40528f8d5014c3d70661dc0477122dab7
 	int** graph = get_dynamic_arr(vertexs);
 	fill_arr(in, vertexs, graph);
 	print(vertexs, graph);
@@ -76,11 +64,7 @@ int main()
 
 	bool* visited = new bool[vertexs] {};
 	int start_v{};
-<<<<<<< HEAD
 	std::cout << "Ð¡Ñ‚Ð°Ñ€Ñ‚Ð¾Ð²Ð°Ñ Ð²ÐµÑ€ÑˆÐ¸Ð½Ð°: ";
-=======
-	std::cout << "Ñòàðòîâàÿ âåðøèíà: ";
->>>>>>> e84f42f40528f8d5014c3d70661dc0477122dab7
 	std::cin >> start_v;
 	dfs(graph, visited, start_v - 1, vertexs);
 
