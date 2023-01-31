@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <fstream>
 #include <vector>
+#include <queue>
 
 int** get_dynamic_arr(const int vertex)
 {
@@ -43,6 +44,78 @@ void dfs(int** graph, bool* visited, int v, int vertexs)
 	}
 }
 
+void bfs(const std::vector<std::vector<int>>& vec, int start_v, bool* visited)
+{
+	std::queue<int> q;
+	q.push(start_v + 1);
+	visited[0] = true;
+	int last_inf{};
+
+	for (int level = last_inf;  q.size() != vec.size(); level = last_inf)
+	{
+		for (int v = 0; v < vec[level].size(); v++)
+		{
+			if (!visited[vec[level][v] - 1])
+			{
+				visited[vec[level][v] - 1] = true;
+				q.push(vec[level][v]);
+				last_inf = q.back() - 1;
+			}
+		}
+	}
+	std::cout << "Порядок обхода вершин: \n";
+	while (!q.empty()) {
+		std::cout << q.front() << " ";
+		q.pop();
+	}
+}
+
+enum class bypassmode {
+	in_wide = 1,
+	in_depth
+};
+
+int count_ribs(int* graph, int size)
+{
+	int count{};
+	for (int i = 0; i < size; i++)
+	{
+		if (graph[i]) {
+			count++;
+		}
+	}
+	return count;
+}
+
+void for_vec_func(std::vector<std::vector<int>>& vec, int** graph)
+{
+	int arr[] = { 1,2,3,4,5,6,7 };
+
+	for (int i = 0; i < vec.size(); i++)
+	{
+		int ribs = count_ribs(graph[i], vec.size());
+		for (int j = 0; j < vec.size(); j++)
+		{
+			if (graph[i][j] != 0)
+			{
+				vec[i].push_back(arr[j]);
+			}
+		}
+		vec[i].resize(ribs);
+	}
+}
+
+
+void print_v(std::vector<std::vector<int>> vec)
+{
+	for (auto& t : vec) {
+		for (auto& i : t) {
+			std::cout << i << " ";
+		}
+		std::cout << "\n";
+	}
+}
+
 int main()
 {
 	setlocale(LC_ALL, "Ru");
@@ -66,6 +139,26 @@ int main()
 	int start_v{};
 	std::cout << "Стартовая вершина: ";
 	std::cin >> start_v;
-	dfs(graph, visited, start_v - 1, vertexs);
+
+
+	std::cout << "Выберите режим обхода 1 - в ширину, 2 - в глубину: ";
+	int mode{};
+	std::cin >> mode;
+	switch (static_cast<bypassmode>(mode))
+	{
+	case bypassmode::in_wide: {
+		std::vector<std::vector<int>> vec;
+		vec.resize(vertexs);
+		for_vec_func(vec, graph);
+		bfs(vec, start_v - 1, visited);
+		break;
+	}
+	case bypassmode::in_depth:
+		dfs(graph, visited, start_v - 1, vertexs);
+		break;
+	default:
+		break;
+	}
+
 
 }
