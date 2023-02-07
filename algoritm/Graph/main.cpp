@@ -15,7 +15,7 @@ int** get_dynamic_arr(const int vertex)
 
 void fill_arr(std::ifstream& stream, const int vertex, int** arr) {
 
-	for (int i = 0; !stream.eof(); i++) {
+	for (int i = 0; i < vertex; i++) {
 		for (int j = 0; j < vertex; j++) {
 			stream >> arr[i][j];
 		}
@@ -72,7 +72,8 @@ void bfs(const std::vector<std::vector<int>>& vec, int start_v, bool* visited)
 
 enum class bypassmode {
 	in_wide = 1,
-	in_depth
+	in_depth,
+	in_ograph
 };
 
 int count_ribs(int* graph, int size)
@@ -104,6 +105,33 @@ void for_vec_func(std::vector<std::vector<int>>& vec, int** graph)
 		vec[i].resize(ribs);
 	}
 }
+
+
+void ograph(int** graph, int size)
+{
+	std::cout << "Текстовый вид орграфа: " << std::endl;
+	for (int i = 0; i < size; i++)
+	{
+		bool empty_g = true;
+		int v = 0;
+		std::cout << i + 1 << ": ";
+		for (int j = 0; j < size; j++)
+		{
+			v++;
+			if (graph[i][j] == 1) {
+				std::cout << v << " ";
+				empty_g = false;
+			}
+		}
+		if (empty_g) {
+			std::cout << "нет" << std::endl;
+		}
+		else {
+			std::cout << "\n";
+		}
+	}
+}
+
 
 
 void print_v(std::vector<std::vector<int>> vec)
@@ -140,8 +168,7 @@ int main()
 	std::cout << "Стартовая вершина: ";
 	std::cin >> start_v;
 
-
-	std::cout << "Выберите режим обхода 1 - в ширину, 2 - в глубину: ";
+	std::cout << "Выберите режим обхода 1 - в ширину, 2 - в глубину, 3 - орграф: ";
 	int mode{};
 	std::cin >> mode;
 	switch (static_cast<bypassmode>(mode))
@@ -153,8 +180,15 @@ int main()
 		bfs(vec, start_v - 1, visited);
 		break;
 	}
-	case bypassmode::in_depth:
+	case bypassmode::in_depth: {
+		int start_v{};
+		std::cout << "Стартовая вершина: ";
+		std::cin >> start_v;
 		dfs(graph, visited, start_v - 1, vertexs);
+		break;
+	}
+	case bypassmode::in_ograph:
+		ograph(graph, vertexs);
 		break;
 	default:
 		break;
