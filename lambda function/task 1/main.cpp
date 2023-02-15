@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <vector>
+#include <algorithm>
 
 int main()
 {
@@ -13,17 +14,16 @@ int main()
 	std::cout << "\n";
 
 	std::cout << "Выходные данные: ";
-	auto func = [&vec]() {
-		for (const auto& i : vec) {
-			if(!(i % 2 == 0))
-				std::cout << i * 3 << " ";
-			else
-				std::cout << i << " ";
-		}
-		std::cout << "\n";
-	};
 
-	func();
+	std::for_each(vec.begin(), vec.end(),
+		[](int el) {
+			if (!(el % 2 == 0))
+			std::cout << el * 3 << " ";
+			else
+				std::cout << el << " ";
+		}
+	);
+
 
 	return 0;
 }
