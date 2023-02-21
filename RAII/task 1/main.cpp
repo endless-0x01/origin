@@ -25,7 +25,7 @@ public:
 	{
 		if (this == &other) return *this;
 		const auto new_buffer = new int[other._max_size];
-		delete _arr;
+		delete[] _arr;
 		_arr = nullptr;
 
 		_max_size = other._max_size;
