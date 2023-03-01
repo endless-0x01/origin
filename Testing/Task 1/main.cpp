@@ -136,8 +136,9 @@ TEST_CASE("List", "[list]")
     {
         try
         {
-            l.PopFront();
             l.PopBack();
+            l.PopFront();
+            CHECK(false);
         }
         catch (std::runtime_error& e)
         {
