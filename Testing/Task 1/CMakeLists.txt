@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.0)
+project("Urok4")
+add_subdirectory(D:\\netology\\Testing\\Catch2 Catch2-build)
+add_executable(Urok4 "main.cpp")
+target_link_libraries(Urok4 PRIVATE Catch2::Catch2)
