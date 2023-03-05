@@ -31,7 +31,8 @@ private:
 int main() {
 
 	std::vector<int> vec {4, 1, 3, 6, 25, 54};
-	std::for_each(vec.begin(), vec.end(), [](const int& n) { sf(n); });
+	sf = std::for_each(vec.begin(), vec.end(), sf);
+	//std::for_each(vec.begin(), vec.end(), [](const int& n) { sf(n); });
 	
 	std::cout << "Count: " << sf.get_count() << " | Sum: " << sf.get_sum() << std::endl;
 

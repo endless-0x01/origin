@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-
+#include <algorithm>
 
 template<class T>
 T sqrt_for_me(T num)
@@ -16,21 +16,23 @@ T sqrt_for_me(T num)
 }
 
 template<class T> 
-void sqrt_for_me(std::vector<T>& vec)
+std::vector<T> sqrt_for_me(std::vector<T>& vec)
 {
-	for (auto& num : vec) {
-		num = sqrt_for_me(num);
+	std::vector<T> temp;
+	for (auto num : vec) {
+		temp.push_back(sqrt_for_me(num));
 	}
+
+	return temp;
 }
 
 
 int main()
 {
-	std::cout << sqrt_for_me(4) << std::endl;
+	int a = sqrt_for_me(5);
+	std::cout << a << std::endl;
 	std::vector<int> vec{ -1,4,8 };
-	sqrt_for_me(vec);
-	for (auto& i : vec) {
-		std::cout << i << " ";
-	}
+	std::vector<int> test = sqrt_for_me(vec);
+	std::for_each(test.begin(), test.end(), [](int n) {std::cout << n << ", "; });
 	return 0;
 }
