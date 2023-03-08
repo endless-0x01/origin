@@ -24,13 +24,12 @@ public:
 		delete[] arr;
 	}
 
-	simple_doule_arr(simple_doule_arr& other) :
+	simple_doule_arr(const simple_doule_arr& other) :
 		row{ other.row }, col{ other.col }
 	{
-		// Сделал через malloc для повторения материала
-		arr = static_cast<T**>(malloc(row * sizeof(T*)));
+		arr = new T[row];
 		for (int i = 0; i < row; i++) {
-			arr[i] = static_cast<T*>(malloc(col * sizeof(T*)));
+			arr[i] = new T[col];
 		}
 
 		for (int i = 0; i < row; i++) {
@@ -48,18 +47,18 @@ public:
 		other.arr = nullptr;
 	}
 
-	simple_doule_arr& operator=(simple_doule_arr& other)
+	simple_doule_arr& operator=(const simple_doule_arr& other)
 	{
 		if (this == &other)	return *this;
 
 		row = other.row;
 		col = other.col;
 
-		auto new_arr = static_cast<T**>(malloc(row * sizeof(T*)));
+		auto new_arr = new T[row];
 
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < col; j++) {
-				new_arr[i] = static_cast<T*>(malloc(col * sizeof(T*)));
+				new_arr[i] = new T[col];
 			}
 		}
 
@@ -79,7 +78,7 @@ public:
 		if (this == &other) return *this;
 
 		if (arr != nullptr)
-			this->~simple_doule_arr();
+			free_memory(*this);
 
 		row = other.row;
 		col = other.col;
@@ -103,7 +102,14 @@ public:
 	const int Size() const {
 		return row + col;
 	}
-
+protected:
+	void free_memory(simple_doule_arr& object) {
+		for (int i = 0; i < object.row; i++) {
+			delete object.arr[i];
+			object.arr[i] = nullptr;
+		}
+		delete[] object.arr;
+	}
 private:
 	int row;
 	int col;

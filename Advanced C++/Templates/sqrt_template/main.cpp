@@ -16,7 +16,7 @@ T sqrt_for_me(T num)
 }
 
 template<class T> 
-std::vector<T> sqrt_for_me(std::vector<T>& vec)
+std::vector<T> sqrt_for_me(const std::vector<T>& vec)
 {
 	std::vector<T> temp;
 	for (auto num : vec) {
