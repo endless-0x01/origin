@@ -57,9 +57,7 @@ public:
 		auto new_arr = new T[row];
 
 		for (int i = 0; i < row; i++) {
-			for (int j = 0; j < col; j++) {
-				new_arr[i] = new T[col];
-			}
+			new_arr[i] = new T[col];
 		}
 
 		for (int i = 0; i < row; i++) {
@@ -78,7 +76,7 @@ public:
 		if (this == &other) return *this;
 
 		if (arr != nullptr)
-			free_memory(*this);
+			free_memory();
 
 		row = other.row;
 		col = other.col;
@@ -103,12 +101,11 @@ public:
 		return row + col;
 	}
 protected:
-	void free_memory(simple_doule_arr& object) {
-		for (int i = 0; i < object.row; i++) {
-			delete object.arr[i];
-			object.arr[i] = nullptr;
+	void free_memory() {
+		for (int i = 0; i < this->row; i++) {
+			delete this->arr[i];
 		}
-		delete[] object.arr;
+		delete[] this->arr;
 	}
 private:
 	int row;
