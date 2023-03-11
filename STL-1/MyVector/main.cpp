@@ -17,6 +17,28 @@ public:
 		size_ = 0, capacity_ = 0;
 	}
 
+	my_vecotr(const my_vecotr& object)
+		: size_{ object.size_ }, capacity_{ object.capacity_ }, arr_{new T[object.capacity_]}
+	{
+		std::copy(&object.arr_[0], &object.arr_[object.capacity_], arr_);
+	}
+	my_vecotr operator=(my_vecotr& object)
+	{
+		if (this == &object) return *this;
+
+		free_memory();
+
+		size_ = object.size_;
+		capacity_ = object.capacity_;
+		arr_ = new T[capacity_];
+		std::copy(&object.arr_[0], &object.arr_[object.capacity_], arr_);
+
+		return *this;
+	}
+	my_vecotr(my_vecotr&& objcet) noexcept = delete;
+	my_vecotr operator=(my_vecotr&& object) noexcept = delete;
+
+
 	void show_data() {
 		for (int i = 0; i < size_; i++) {
 			std::cout << arr_[i] << " ";
@@ -35,11 +57,11 @@ public:
 		}
 	}
 
-	int size() {
+	size_t size() {
 		return size_;
 	}
 
-	int capacity() {
+	size_t capacity() {
 		return capacity_ - size_;
 	}
 
@@ -92,6 +114,15 @@ int main()
 		std::cout << vec.capacity() << std::endl;
 		std::cout << vec.size() << std::endl;
 		vec.show_data();
+		my_vecotr<int> vec_2{ vec };
+		//vec = std::move(vec_2);
+		vec_2.show_data();
+		my_vecotr<int> test{ 3,4,5,6 };
+		test.show_data();
+		test = vec_2;
+		test.show_data();
+
+		std::cout << &vec << " " << &vec_2 << " " << &test << std::endl;
 	}
 	catch (std::runtime_error& e) {
 		std::cout << e.what() << std::endl;
