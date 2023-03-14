@@ -22,7 +22,7 @@ public:
 	{
 		std::copy(&object.arr_[0], &object.arr_[object.capacity_], arr_);
 	}
-	my_vecotr operator=(my_vecotr& object)
+	my_vecotr& operator=(my_vecotr& object)
 	{
 		if (this == &object) return *this;
 
@@ -122,6 +122,10 @@ int main()
 		test = vec_2;
 		test.show_data();
 
+		my_vecotr<int> r;
+		r = test;
+
+		r.show_data();
 		std::cout << &vec << " " << &vec_2 << " " << &test << std::endl;
 	}
 	catch (std::runtime_error& e) {
