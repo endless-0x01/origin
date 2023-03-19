@@ -4,7 +4,7 @@
 template<typename T>
 void move_vectors(std::vector<T>&& object, std::vector<T>& object2)
 {
-	object2 = object;
+	object2 = std::move(object);
 	object.clear();
 }
 

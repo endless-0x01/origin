@@ -8,13 +8,13 @@ public:
 	big_intenger(std::string num) : number{ num } {}
 
 	big_intenger(big_intenger&& other) noexcept :
-		number{other.number}
+		number{std::move(other.number)}
 	{
 		other.number = "0";
 	}
 	big_intenger& operator=(big_intenger&& other) noexcept {
 		if (this == &other) return *this;
-		number = other.number;
+		number = std::move(other.number);
 		other.number = "0";
 	}
 
