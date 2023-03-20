@@ -19,7 +19,10 @@ public:
 	template<typename T>
 	T get_result(const std::string& key, const std::string& value)
 	{
-		//static_assert(true, "not implemented convertion");
+		if (typeid(T) != typeid(int) || typeid(T) != typeid(std::string) || typeid(T) != typeid(double)) 
+		{
+			throw std::invalid_argument("not implemented convertion");
+		}
 	}
 	template<>
 	std::string get_result(const std::string& key, const std::string& value)
