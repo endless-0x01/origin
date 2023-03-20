@@ -26,28 +26,27 @@ bool Syntax::rules_for_value(const std::string& str)
 	std::string variable;
 	std::string values;
 
-	 if (std::isalpha(str[0])) {
-		 bool next = false;
-		 for (auto& s : str) {
-			 if (s == '=') {
-				 next = true;
-				 continue;
-			 }
-			 if (s == ';')
-				 break;
-			 if (!next)
-				 variable += s;
-			 else if(next)
-				 values += s;
-		 }
+	if (std::isalpha(str[0])) {
+		bool next = false;
+		for (auto& s : str) {
+			if (s == '=') {
+				next = true;
+				continue;
+			}
+			if (s == ';')
+				break;
+			if (!next)
+				variable += s;
+			else if (next)
+				values += s;
+		}
 	}
 
-	 if (check_value(values) && check_varibale(variable)) {
-		 ini.at(last_section)[variable] = values;
+	if (check_value(values) && check_varibale(variable)) {
+		ini.at(last_section)[variable] = values;
 
-		 //std::cout << ini[last_section][variable] << std::endl;
-		 return true;
-	 }
+		return true;
+	}
 
 	return false;
 }
@@ -64,7 +63,7 @@ bool Syntax::check_value(std::string& str)
 {
 	for (auto& s : str)
 	{
-		if ((isalpha(s)) && ('0' <= s && s <= '9') ) 
+		if ((isalpha(s)) && ('0' <= s && s <= '9'))
 		{
 			return false;
 		}
@@ -72,8 +71,6 @@ bool Syntax::check_value(std::string& str)
 
 	return true;
 }
-
-
 
 void Syntax::get_data(std::string& str)
 {
