@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "libqpxx-build/test",
+		"source" : "D:/netology/Working with databases/libpqxx-7.7.5/test"
+	}
+}

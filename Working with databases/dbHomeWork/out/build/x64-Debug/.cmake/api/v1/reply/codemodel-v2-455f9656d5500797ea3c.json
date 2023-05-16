@@ -1,0 +1,160 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "libqpxx-build",
+					"childIndexes" : 
+					[
+						2,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-libqpxx-build-Debug-098a0410984e4decb3d5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "D:/netology/Working with databases/libpqxx-7.7.5"
+				},
+				{
+					"build" : "libqpxx-build/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-libqpxx-build.src-Debug-787d9399aafb5ab624ac.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "D:/netology/Working with databases/libpqxx-7.7.5/src",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "libqpxx-build/include",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-libqpxx-build.include-Debug-0789dc7db4b38d4b0ad7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "D:/netology/Working with databases/libpqxx-7.7.5/include"
+				},
+				{
+					"build" : "libqpxx-build/test",
+					"jsonFile" : "directory-libqpxx-build.test-Debug-fbbf0d11cc3549d673a3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "D:/netology/Working with databases/libpqxx-7.7.5/test",
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "dbHomeWork",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"name" : "libpqxx",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "dbHomeWork::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dbHomeWork-Debug-3941a8dd03b7a29f0efe.json",
+					"name" : "dbHomeWork",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "pqxx::@b798a81a8fa129a1020a",
+					"jsonFile" : "target-pqxx-Debug-144bb84f44bcc9ba8eb0.json",
+					"name" : "pqxx",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "runner::@8e1095ef32d9758d9fd9",
+					"jsonFile" : "target-runner-Debug-dffd706ede19374d866d.json",
+					"name" : "runner",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/netology/Working with databases/dbHomeWork/out/build/x64-Debug",
+		"source" : "D:/netology/Working with databases/dbHomeWork"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
