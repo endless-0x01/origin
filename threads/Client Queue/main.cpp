@@ -1,7 +1,7 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <thread>
 
-import set_color; // использовал модуль, что бы попрактиковаться и закрепить материал из книги
+import set_color; // РёСЃРїРѕР»СЊР·РѕРІР°Р» РјРѕРґСѓР»СЊ, С‡С‚Рѕ Р±С‹ РїРѕРїСЂР°РєС‚РёРєРѕРІР°С‚СЊСЃСЏ Рё Р·Р°РєСЂРµРїРёС‚СЊ РјР°С‚РµСЂРёР°Р» РёР· РєРЅРёРіРё
 
 constexpr int max_clients = 8;
 int numClients = 0;
@@ -13,7 +13,7 @@ void customerThread() {
 		++numClients;
 		if (numClients <= 8) {
 			consol_color::SetColor(15, 0);
-			std::cout << "В очередь добавился новый клиет. Общее кол-во в очереди: "
+			std::cout << "Р’ РѕС‡РµСЂРµРґСЊ РґРѕР±Р°РІРёР»СЃСЏ РЅРѕРІС‹Р№ РєР»РёРµС‚. РћР±С‰РµРµ РєРѕР»-РІРѕ РІ РѕС‡РµСЂРµРґРё: "
 				<< numClients << std::endl;
 		}
 		else {
@@ -29,7 +29,7 @@ void operatorThread() {
 		if (numClients > 0) {
 			consol_color::SetColor(10, 0);
 			--numClients;
-			std::cout << "Клиент обслужан. Общее кол-во в очереди: "
+			std::cout << "РљР»РёРµРЅС‚ РѕР±СЃР»СѓР¶Р°РЅ. РћР±С‰РµРµ РєРѕР»-РІРѕ РІ РѕС‡РµСЂРµРґРё: "
 				<< numClients << std::endl;
 		}
 		else {
@@ -47,7 +47,7 @@ int main()
 
 	t1.join();
 	t2.join();
-	std::cout << "Все клиенты обслужаны!" << std::endl;
+	std::cout << "Р’СЃРµ РєР»РёРµРЅС‚С‹ РѕР±СЃР»СѓР¶Р°РЅС‹!" << std::endl;
 
 	return 0;
 }
