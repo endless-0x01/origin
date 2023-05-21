@@ -31,7 +31,7 @@ void updateProgress() {
         std::lock_guard<std::mutex> lock(consoleMutex);
 
         // Очистка экрана
-        std::cout << "\033[2J\033[1;1H";
+        system("cls");
 
         for (int i = 0; i < COUNT_THREADS; ++i) {
             std::cout << progress[i] << std::endl;
