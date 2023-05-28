@@ -23,7 +23,7 @@ void Square::scaleY(int s) {
 }
 
 void Square::scaleZ(int s) {
-    // No operation needed for a 2D shape
+    p1.z *= s; p2.z *= s; p3.z *= s; p4.z *= s;
 }
 
 void Square::scale(int s) {
