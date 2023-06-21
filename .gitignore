@@ -396,3 +396,10 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Ignore CMake build files
+build/
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+*.cmake
