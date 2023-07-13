@@ -9,8 +9,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Network Sql)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Network Sql)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Network Sql)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Network Sql)
 
 set(PROJECT_SOURCES
         main.cpp
@@ -32,7 +32,7 @@ else()
     endif()
 endif()
 
-target_link_libraries(QTNetworkSQLApp PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Network Qt${QT_VERSION_MAJOR}::Sql)
+target_link_libraries(QTNetworkSQLApp PRIVATE Qt${QT_VERSION_MAJOR}::Network Qt${QT_VERSION_MAJOR}::Sql)
 
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(QTNetworkSQLApp)
